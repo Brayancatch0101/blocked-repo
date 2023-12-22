@@ -16,7 +16,8 @@ module.exports = {
     '!<rootDir>/*.config.js',
     '!<rootDir>/coverage/**'
   ],
-
+const { pathsToModuleNameMapper } = require('ts-jest')
+const { compilerOptions } = require('./tsconfig.json')
 
   testPathIgnorePatterns: ['<rootDir>/node_modules/', '<rootDir>/\\.next/'],
   testEnvironment: 'jsdom',
