@@ -14,35 +14,3 @@
       "@layouts": ["./@next/layouts"]
     }
   },
-
-
-/* eslint-disable @typescript-eslint/no-var-requires */
-const { pathsToModuleNameMapper } = require('ts-jest')
-const { compilerOptions } = require('./tsconfig.json')
-module.exports = {
-  collectCoverageFrom: [
-    '**/*.{js,jsx,ts,tsx}',
-    '!**/@next/ApiReq/*',
-    '!**/@next/utils/*',
-    '!**/@next/hooks/*',
-    '!**/@next/store/slices/auth/*',
-    '!**/*.d.ts',
-    '!**/node_modules/**',
-    '!<rootDir>/pages/**',
-    '!<rootDir>/out/**',
-    '!<rootDir>/.next/**',
-    '!<rootDir>/*.config.js',
-    '!<rootDir>/coverage/**'
-  ],
-
-  images: {
-    domains: ['ipfs.io']
-  },
-  publicRuntimeConfig: {
-    // Will be available on both server and client
-    apiKey: process.env.NEXT_PUBLIC_API_KEY,
-    settings
-  }
-}
-
-module.exports = nextConfig
